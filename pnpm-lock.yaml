@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@auth/core':
+    specifier: ^0.19.1
+    version: 0.19.1
   '@auth/prisma-adapter':
     specifier: ^1.0.13
     version: 1.0.13(@prisma/client@5.7.1)
