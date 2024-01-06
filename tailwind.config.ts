@@ -25,10 +25,12 @@ const config = {
         foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))",
+          hover: "hsl(var(--primary-hover))",
+          foreground: "hsl(var(--primary-foreground))"
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
+          hover: "hsla(var(--secondary-hover), 0.25)",
           foreground: "hsl(var(--secondary-foreground))",
         },
         destructive: {
@@ -73,6 +75,7 @@ const config = {
       },
     },
   },
+  // eslint-disable-next-line global-require
   plugins: [require("tailwindcss-animate")],
 } satisfies Config
 

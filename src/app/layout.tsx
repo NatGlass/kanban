@@ -1,13 +1,13 @@
-import {Inter} from 'next/font/google';
+import {Plus_Jakarta_Sans} from 'next/font/google';
 import {PropsWithChildren} from 'react';
 import './globals.css';
 
-const inter = Inter({subsets: ['latin']});
+const font = Plus_Jakarta_Sans({subsets: ['latin'], weight: ['400', '500', '700']});
 
 export default function RootLayout({children}: PropsWithChildren) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={font.className}>{children}</body>
     </html>
   );
 }
