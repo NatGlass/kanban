@@ -1,7 +1,7 @@
 import NextAuth from 'next-auth';
 
 import authConfig from '../auth.config';
-import {authRoutes} from '../routes';
+import {authRoutes, callbackRoutes} from '../routes';
 
 const {auth} = NextAuth(authConfig);
 
@@ -20,7 +20,7 @@ export default auth(req => {
   }
 
   // Unauthenticated users cannot go to the dashboard
-  if (!isLoggedIn) {
+  if (!isLoggedIn && !callbackRoutes) {
     return Response.redirect(new URL('/api/auth/signin', nextUrl));
   }
 
